@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    z-index: 1000;
+    background-color: white;
+    position: fixed; /* ทำให้ header ค้างบนสุด */
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    border-style: none none solid none;
+    border-color: rgb(5, 0, 102);
+    border-width: 2px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    float: left;
+}
+.input-box{
+    float: right;
+    margin-top: 30px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+
+.input-box input{
+    min-width: 200px;
+    min-height: 30px;
+    border-style: stroke;
+    padding-left: 20px;
+}
+
+.input-box i {
+    right: 20px;
+    font-size: 16px;
+    color: #707070;
+}
+
+.input-box .button {
+    position: absolute;
+    top: 36px;
+    right: 55px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* -----------------finish header---------------------- */
+
+nav {
+    margin-left: 40px;
+    z-index: 1;
+    background-color: white;
+    position: fixed; /* ทำให้ header ค้างบนสุด */
+    top: 98px;
+    padding-bottom: 10px;
+    border-style: none none solid none;
+    border-width: 1px;
+    display: inline-block;
+    width: 95%;
+}
+
+.nav_menu {
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.nav_link{
+    margin: 5px;
+    padding: 5px;
+}
+
+nav h1 {
+    margin-top: 40px;
+}
+
+/* -----------------finish nav---------------------- */
+
+main {
+    position: sticky;
+    justify-content: space-between; /* ทำให้มีช่องว่างระหว่าง aside และ product-grid */
+    gap: 20px;
+    transform: translateY(210px);
+    border-width: 1px;
+    padding-top: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    height: auto;
+}
+.product-image {
+    background: #707070;
+    width: 100%; 
+    max-width: 250px;
+    aspect-ratio: 1 / 1;
+}
+
+img {
+    display: flex;
+    flex: 1;
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.product-grid {
+    float: right;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* กำหนดให้มี 3 คอลัมน์ */
+    gap: 20px;  /*ระยะห่างระหว่างคอลัมน์ */
+  }
+
+@media (max-width: 1024px) {
+    .product-grid {
+        float: right;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* กำหนดให้มี 3 คอลัมน์ */
+        gap: 20px;  /*ระยะห่างระหว่างคอลัมน์ */
+      }
+}
+  
+.product-item {
+    width: 100%; 
+    max-width: 250px;
+    padding: 10px;
+}
+
+.product-item p {
+    font-size: 20px;
+}
+
+/* -----------------finish main---------------------- */
+
+aside {
+    background-color: #707070;
+    position: relative;
+    height: auto;
+    float: left;
+
+}
+
+
+
+/* -----------------finish aside---------------------- */
+
+footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
