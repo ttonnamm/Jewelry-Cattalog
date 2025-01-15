@@ -70,9 +70,9 @@ a {
 
 nav {
     margin-left: 40px;
-    z-index: 1;
+    z-index: 10;
     background-color: white;
-    position: fixed; /* ทำให้ header ค้างบนสุด */
+    position: fixed; 
     top: 98px;
     padding-bottom: 10px;
     border-style: none none solid none;
@@ -93,19 +93,21 @@ nav {
 
 nav h1 {
     margin-top: 40px;
+    font-size: 30px;
 }
 
 /* -----------------finish nav---------------------- */
 
 main {
-    position: sticky;
+    position: initial;
     justify-content: space-between; /* ทำให้มีช่องว่างระหว่าง aside และ product-grid */
     gap: 20px;
-    transform: translateY(210px);
-    border-width: 1px;
-    padding-top: 30px;
-    margin-left: 40px;
-    margin-right: 40px;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    top: 250px;
+    overflow-y: auto;
+    margin: 40px;
+    margin-top: 250px;
     height: auto;
 }
 .product-image {
@@ -148,24 +150,55 @@ img {
 
 .product-item p {
     font-size: 20px;
+    padding: 10px;
 }
 
 /* -----------------finish main---------------------- */
 
 aside {
-    background-color: #707070;
-    position: relative;
-    height: auto;
+    margin-left: 40px;
+    z-index: 1;
+    position: fixed; 
+    top: 250px;
     float: left;
-
+    min-height: auto;
+    width: 200px;
+    font-size: 20px;
 }
+
+.filter {
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
 
 
 
 /* -----------------finish aside---------------------- */
 
 footer {
+    background-color: #757575;
     bottom: 0;
     left: 0;
     width: 100%;
+    padding: 40px;
+    color: white;
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.company_title{
+    padding: 5px;
+    font-size: 25px;
+}
+
+.company_Address{
+    padding: 10px 5px 10px 5px;
+}
+
+.contract {
+    padding: 5px;
 }
