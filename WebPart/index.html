@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-wide, initial-scale=1.0">
     <title>Jewelry Cattalog</title>
+    <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
@@ -34,38 +35,60 @@
     <aside>
         <h3>Catagories</h3>
         <div class="checkbox-wrapper-42">
-            <input id="A" type="checkbox" />
-            <label class="cbx" for="A"></label>
-            <label class="lbl" for="A">A</label>
-          </div>
-          <div class="checkbox-wrapper-42">
-            <input id="B" type="checkbox" />
-            <label class="cbx" for="B"></label>
-            <label class="lbl" for="B">B</label>
-          </div>
-          <div class="checkbox-wrapper-42">
-            <input id="C" type="checkbox" />
-            <label class="cbx" for="C"></label>
-            <label class="lbl" for="C">C</label>
-          </div>
+            <input id="filterA" onchange="filterProducts()" type="checkbox" />
+            <label class="cbx" for="filterA"></label>
+            <label class="lbl" for="filterA">A</label>
+        </div>
+        <div class="checkbox-wrapper-42">
+            <input id="filterB" onchange="filterProducts()" type="checkbox" />
+            <label class="cbx" for="filterB"></label>
+            <label class="lbl" for="filterB">B</label>
+        </div>
+        <div class="checkbox-wrapper-42">
+            <input id="filterC" onchange="filterProducts()" type="checkbox" />
+            <label class="cbx" for="filterC"></label>
+            <label class="lbl" for="filterC">C</label>
+        </div>
+        
     </aside>
 
     <main>
-        <div></div>
-        <div class="product-grid">
-            <a href="" class="product-item">
-                <div class="product-image"><img src="Sakuma.png"/></div>
-                <p class="product-name">name item</p>
-                <p class="product-price">฿ xx,xxx</p>
-            </a>
-            <a href="" class="product-item">
-                <div class="product-image"><img src="testimg.jpg"/></div>
-                <p class="product-name">name item</p>
-                <p class="product-price">฿ xx,xxx</p>
-            </a>
-            <a href="" class="product-item">
+        <div>
+            <div style="visibility: hidden;">
                 <div class="product-image"></div>
-                <p class="product-name">name item</p>
+                <p class="product-name"> </p>
+                <p class="product-price"> </p>
+            </div>
+            <div style="visibility: hidden;">
+                <div class="product-image"></div>
+                <p class="product-name"> </p>
+                <p class="product-price"> </p>
+            </div>
+            <div style="visibility: hidden;">
+                <div class="product-image"></div>
+                <p class="product-name"> </p>
+                <p class="product-price"> </p>
+            </div>
+            <div style="visibility: hidden;">
+                <div class="product-image"></div>
+                <p class="product-name"> </p>
+                <p class="product-price"> </p>
+            </div>
+        </div>
+        <div class="product-grid">
+            <a href="" class="product-item" data-type="A">
+                <div class="product-image"><img src="Sakuma.png" alt="Sakuma"/></div>
+                <p class="product-name">Sakuma item</p>
+                <p class="product-price">฿ xx,xxx</p>
+            </a>
+            <a href="" class="product-item" data-type="C">
+                <div class="product-image"><img src="testimg.jpg" alt="Test"/></div>
+                <p class="product-name">Test item</p>
+                <p class="product-price">฿ xx,xxx</p>
+            </a>
+            <a href="" class="product-item" data-type="B">
+                <div class="product-image"><img src="otherimg.jpg" alt="Other"/></div>
+                <p class="product-name">Other item</p>
                 <p class="product-price">฿ xx,xxx</p>
             </a>
             <a href="" class="product-item">
@@ -131,8 +154,6 @@
             <p class="contract">jewelryparts@gmail.com</p>
         </div>
     </footer>
-
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="assets/Java/main.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
