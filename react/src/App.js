@@ -2,11 +2,11 @@ import './App.css';
 import React, { useState } from "react";
 import ProductItem from './ProductItem';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ProductDetail from "./ProductDetail"; // หน้ารายละเอียดสินค้า
+import ProductDetail from "./ProductDetail"; 
 
 const products = [
     { 
-        id: 1, //ProductItem line-> 10 | ProductDetail line-> 7
+        id: 1, //ProductItem line-> 10 | ProductDetail line-> 6, 7
         name: "Sakuma", //ProductItem line-> 12,14 | ProductDetail line-> 16,18
         type: "A", //ProductItem line-> 10 
         material: "silver", //ProductItem line-> 10
