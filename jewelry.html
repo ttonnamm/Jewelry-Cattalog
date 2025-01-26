@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry Cattalog</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+<body>
+ <!-----------------------------header------------------------------>
+<header class="l-header"> 
+    <div class="nav bd-grid">
+        <div class="left-icons">
+            <div class="nav_toggle" id="nav-toggle">
+            <i class='bx bx-menu' ></i>
+            </div>
+            <div class="filter_toggle" id="filter-toggle">
+                <i class='bx bx-plus' ></i>
+            </div>
+        </div>
+            <div href="#" class="logo">Jewelry Parts</div>
+                <div class="search-container">
+                    <div class="search-bar" id="search-bar">
+                        <form id="search-form" action="https://www.google.com/search" method="get" target="_blank">
+                        <input type="text" name="q" placeholder="Search...">
+                        </form>
+                    </div>
+                    <i class="uil uil-search" id="search-icon"></i>
+            </div>
+    </div> 
+    </header>
+<!-----------------------------nav menu------------------------------>
+    <div class="nav_menu" id="nav-menu">
+        <ul class="nav_list">
+            <li class="nav_item"><a href="#home" class="nav_link">Home</a></li>
+            <li class="nav_item"><a href="#type1" class="nav_link">Type1</a></li>
+            <li class="nav_item"><a href="#type2" class="nav_link">Type2</a></li>
+            <li class="nav_item"><a href="#type3" class="nav_link">Type3</a></li>
+            <li class="nav_item"><a href="#collections" class="nav_link">Collections</a></li>
+            <li class="nav_item"><a href="#footer" class="nav_link">Contact Us</a></li>
+        </ul>
+    </div>
+    <main>
+<!-----------------------------filter------------------------------>
+    <aside class="filter-aside" id="filter-aside">
+        <h3>Catagories</h3>
+        <div class="filter">
+                <div class="checkbox-wrapper-42">
+                    <input id="filterA" onchange="filterProducts()" type="checkbox" />
+                    <label class="cbx" for="filterA"></label>
+                    <label class="lbl" for="filterA">A</label>
+                </div>
+                <div class="checkbox-wrapper-42">
+                    <input id="filterB" onchange="filterProducts()" type="checkbox" />
+                    <label class="cbx" for="filterB"></label>
+                    <label class="lbl" for="filterB">B</label>
+                </div>
+                <div class="checkbox-wrapper-42">
+                    <input id="filterC" onchange="filterProducts()" type="checkbox" />
+                    <label class="cbx" for="filterC"></label>
+                    <label class="lbl" for="filterC">C</label>
+                </div>
+        </div>
+    </aside>
+<!-----------------------------product------------------------------>
+    <h1>PRODUCTS</h1>
+    <section class="section" id="home">
+        <div class="product-grid">
+            <a href="" class="product-item" data-type="A">
+                <div class="product-image"><img src="Sakuma.png" alt="Sakuma"/></div>
+                <p class="product-name">Sakuma item</p>
+                <p class="product-price">฿ xx,xxx</p>
+            </a>
+            <a href="" class="product-item" data-type="C">
+                <div class="product-image"><img src="testimg.jpg" alt="Test"/></div>
+                <p class="product-name">Test item</p>
+                <p class="product-price">฿ xx,xxx</p>
+            </a>
+            <a href="" class="product-item" data-type="B">
+                <div class="product-image"><img src="otherimg.jpg" alt="Other"/></div>
+                <p class="product-name">Other item</p>
+                <p class="product-price">฿ xx,xxx</p>
+            </a>
+            <a href="" class="product-item">
+                <div class="product-image"></div>
+                <p class="product-name">name item</p>
+                <p class="product-price">฿ xx,xxx</p>
+            </a>
+            <a href="" class="product-item">
+                <div class="product-image"></div>
+                <p class="product-name">name item</p>
+                <p class="product-price">฿ xx,xxx</p>
+            </a>
+            <a href="" class="product-item">
+                <div class="product-image"></div>
+                <p class="product-name">name item</p>
+                <p class="product-price">฿ xx,xxx</p>
+            </a>
+            <a href="" class="product-item">
+                <div class="product-image"></div>
+                <p class="product-name">name item</p>
+                <p class="product-price">฿ xx,xxx</p>
+            </a>
+            <a href="" class="product-item">
+                <div class="product-image"></div>
+                <p class="product-name">name item</p>
+                <p class="product-price">฿ xx,xxx</p>
+            </a>
+            <a href="" class="product-item">
+                <div class="product-image"></div>
+                <p class="product-name">name item</p>
+                <p class="product-price">฿ xx,xxx</p>
+            </a>
+            <a href="" class="product-item">
+                <div class="product-image"></div>
+                <p class="product-name">name item</p>
+                <p class="product-price">฿ xx,xxx</p>
+            </a>
+            <a href="" class="product-item">
+                <div class="product-image"></div>
+                <p class="product-name">name item</p>
+                <p class="product-price">฿ xx,xxx</p>
+            </a>
+            <a href="" class="product-item">
+                <div class="product-image"></div>
+                <p class="product-name">name item</p>
+                <p class="product-price">฿ xx,xxx</p>
+            </a>
+        </div>
+    </section>
+    </main>
+<!-----------------------------footer------------------------------>
+    <footer class="footer" id="footer">
+        <div class="company_contract">
+            <p class="company_title">JEWELRY PART CO., LTD</p>
+            <p class="company_Address">207/4 Charemkruang Rd., Watprayakrai,<br>Bangkorlamb, Bangkok 10120</p>
+            <p class="contract_tel">Tel : (662) 289-4436</p>
+            <p class="contract_fax">Fax : (662) 291-667</p>
+            <p class="contract_mobile">Moblie : 08-2345-5455</p>
+        </div>
+        <div class="contract_us">
+            <p class="contract">Contract_us</p>
+            <p class="contract_gmail">jewelryparts@gmail.com</p>
+        </div>
+    </footer>
+    <script src="assets/Java/main.js"></script>
+</body>
+</html>
