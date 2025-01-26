@@ -52,21 +52,21 @@ a {
         margin-right: 40px;
         margin-bottom: 20px;
     }
-    
+
     .input-box input{
         min-width: 200px;
         min-height: 30px;
         border-style: stroke;
         padding-left: 20px;
     }
-    
+
     .input-box i {
         right: 20px;
         font-size: 16px;
         color: #707070;
     }
-    
-    .input-box .button {
+
+    .input-box .btn {
         position: absolute;
         top: 36px;
         right: 55px;
@@ -74,7 +74,7 @@ a {
         border: none;
         cursor: pointer;
     }
-    
+
     /* -----------------finish header---------------------- */
     /* -----------------nav---------------------- */
     nav {
@@ -89,27 +89,29 @@ a {
         display: inline-block;
         width: 95%;
     }
-    
-    .nav_menu {
+
+    .nav_ {
         margin-top: 5px;
         padding: 10px;
     }
-    
+
     .nav_link{
         margin: 5px;
         padding: 5px;
     }
-    
+
     nav h1 {
         margin-top: 40px;
         font-size: 30px;
     }
-    
-    /* -----------------finish nav---------------------- */
+
+/* -----------------finish nav---------------------- */
 }
 
 @media (max-width: 768px) {
     header {
+        z-index: 1000;
+        height: 60px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -117,13 +119,35 @@ a {
         background-color: white;
         border-bottom: 1px solid #ddd;
     }
-    
+
     .logo {
         font-size: 25px !important;
-        text-align: center;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
-    .input-box {
+    .btn {
+        position: absolute;
+        transform: translateY(-50%);
+        right: 20px;
+        appearance: none;
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        line-height: normal;
+        margin: 0;
+        outline: none;
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        will-change: transform;
+    }
+
+    .input-bx {
         display: none;
     }
 
@@ -132,13 +156,11 @@ a {
         color: black;
         cursor: pointer;
     }
-    
+
     .search-icon {
         font-size: 24px;
         color: black;
         cursor: pointer;
     }
-    nav{
-        display: none;
-    }
+    
 }
