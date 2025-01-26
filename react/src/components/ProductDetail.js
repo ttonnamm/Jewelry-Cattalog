@@ -1,6 +1,6 @@
 import './ProductDetail.css';
 import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 
 function ProductDetail({ products }) {
     const { id } = useParams(); // Get the id from the URL
@@ -21,20 +21,43 @@ function ProductDetail({ products }) {
         setSelectedSize(size === selectedSize ? null : size); // Toggle the selected size
     };
 
+    // Shuffle products array and get a random subset of products (e.g., 3 products)
+    const randomProducts = products
+        .filter(p => p.id !== product.id)  // Exclude the current product
+        .sort(() => 0.5 - Math.random())    // Shuffle the products
+        .slice(0, 4);                      // Select only 3 random products
+
+    const AnotherElements = randomProducts.length ? (
+        randomProducts.map((product) => (
+            <Link
+                to={`/product/${product.id}`}
+                key={product.id}
+                className="another-item"
+            >
+                <div className="another-image">
+                    <img src={product.image} alt={product.name} />
+                </div>
+                <p className="another-name">{product.name}</p>
+            </Link>
+        ))
+    ) : (
+        <p>No other products available.</p>
+    );
+
     return (
         <div>
             <nav>
-                <div class="nav_Item hidden" id="nav-menu">
-                    <a href="#home" class="nav_link">Home</a>
-                    <a href="#type1" class="nav_link">Type1</a>
-                    <a href="#type2" class="nav_link">Type2</a>
-                    <a href="#type3" class="nav_link">Type3</a>
-                    <a href="#collections" class="nav_link">Collections</a>
-                    <a href="#contactus" class="nav_link">Contact Us</a>
+                <div className="nav_Detail hidden">
+                    <a href="#home" className="manage nav-btn">Home</a>
+                    <a href="#type1" className="manage nav-btn">Type1</a>
+                    <a href="#type2" className="manage nav-btn">Type2</a>
+                    <a href="#type3" className="manage nav-btn">Type3</a>
+                    <a href="#collections" className="manage nav-btn">Collections</a>
+                    <a href="#contactus" className="manage nav-btn">Contact Us</a>
                 </div>
             </nav>
             <main className="main-1">
-                <button onClick={goBack} className="btn-secondary">
+                <button onClick={goBack} className="back btn-icon">
                     <i className="uil uil-angle-left-b"></i>
                 </button>
                 <div className="product-image">
@@ -48,7 +71,7 @@ function ProductDetail({ products }) {
                         {['S', 'M', 'L'].map(size => (
                             <button
                                 key={size}
-                                className={`size-btn ${selectedSize === size ? 'active' : ''}`}
+                                className={`size-btn ${selectedSize === size ? 'size-active' : ''}`}
                                 onClick={() => handleSizeClick(size)}
                                 role="button"
                             >
@@ -57,7 +80,14 @@ function ProductDetail({ products }) {
                         ))}
                     </div>
                 </div>
+                
             </main>
+            <section>
+                    <h2>YOU MAY ALSO LIKE</h2>
+                    <div className='another-product'>
+                        {AnotherElements}
+                    </div>
+            </section>
         </div>
     );
 }
