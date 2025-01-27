@@ -1,7 +1,22 @@
-:root {
-    --first-color: #0c325b;
-    --second-color: #ddd;
-    --white-color: #f5f5f5f5;
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+:root{
+    --header-height: 3rem;
+    --font-semi: 600;
+}
+
+/*----------Color---------*/
+:root{
+    --first-color: #3f4774;
+    --first-color-light: #ffa6c5;
+    --first-color-dark: #b2778c;
+    --second-color: #666666;
+}
+/*----------Typograppfic---------*/
+:root{
+    --body-font: 'Parkinsans', serif;
+    --big-font-size: 2rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: 0.938rem;
 }
 
 * {
@@ -26,7 +41,6 @@ a {
     background-color: white;
     border: none;
     cursor: pointer;
-    line-height: normal;
     font-size: 24px;
     color: black;
 }
@@ -112,9 +126,14 @@ a {
 
 @media (max-width: 768px) {
     header {
+        top: 0;
+        left: 0;
+        display: inline-block;
+        position: fixed;
         z-index: 1000;
         height: 60px;
         display: flex;
+        width: 100%;
         justify-content: space-between;
         align-items: center;
         padding: 20px;
