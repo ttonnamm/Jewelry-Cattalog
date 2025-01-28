@@ -1,0 +1,316 @@
+
+@media (min-width: 768px) {
+    
+    .nav_Detail {
+        margin-left: 40px;
+        z-index: 10;
+        background-color: white;
+        position: fixed; 
+        height: 100px;
+        top: 100px;
+        padding-bottom: 10px;
+        border-style: none none solid none;
+        border-width: 1px;
+        display: inline-block;
+        width: 95%;
+    }
+    .manage {
+        position: relative;
+        top: 25px;
+        margin: 10px;
+        padding: 5px 10px;
+    }
+    .nav-btn{
+        border: 1px solid white;
+        border-radius: 20px;
+        background-color: #ddd;
+        color: var(--second-color);
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .main-1 {
+        position: initial;
+        justify-content: space-between; /* ทำให้มีช่องว่างระหว่าง aside และ product-grid */
+        gap: 20px;
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        overflow-y: auto;
+        margin: 40px;
+        margin-top: 220px;
+        height: auto;
+        padding: 0 30px;
+    }
+    .back {
+        display: none;
+    }
+
+    /* detail css*/
+
+    .product-image {
+        width: 100%; 
+        min-width: 400px;
+        aspect-ratio: 1 / 1;
+        background-color: var(--second-color);
+    }
+
+    @media (max-width: 1024px) {
+        .product-image {
+            width: 100%; 
+            min-width: 300px;
+            aspect-ratio: 1 / 1;
+            background-color: var(--second-color);
+        }
+    }
+
+    .product-detail {
+        padding-left: 30px;
+    }
+
+    img {
+        display: flex;
+        flex: 1;
+        position: relative;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    .pname {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .pprice {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .pdetail {
+        margin-top: 15px;
+    }
+
+    .size-options {
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+        
+    }
+
+    /* button size css*/
+    .size-btn {
+        appearance: none;
+        background-color: white;
+        border: 1px solid var(--second-color);
+        border-radius: 20px;
+        box-sizing: border-box;
+        color: #3B3B3B;
+        cursor: pointer;
+        font-size: 14px;
+        line-height: normal;
+        margin: 0;
+        outline: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: 80px;
+        will-change: transform;
+    }
+
+    .size-btn:disabled {
+        pointer-events: none;
+    }
+
+    .size-btn:hover {
+        transform: translateY(-2px);
+    }
+
+    .size-active {
+        box-shadow: none;
+        color: white;
+        background-color: #1A1A1A;
+        box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+        transform: translateY(0);
+    }
+    section {
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    .another-product {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin: 40px;
+        padding: 50px;
+    }
+
+    .another-image {
+        background: var(--second-color);
+        aspect-ratio: 1 / 1;
+    }
+
+    img {
+        display: flex;
+        flex: 1;
+        position: relative;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    .another-name {
+        font-size: 20px;
+        padding-top: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-1 {
+        padding: 90px 0;
+    }
+
+    .back {
+        z-index: 1000;
+        position: fixed;
+        transform: translateY(-260%);
+        left: 20px;
+        margin: 0;
+        outline: none;
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        will-change: transform;
+    }
+
+    /* deail css*/
+
+    .product-detail {
+        min-height: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    .product-image {
+        aspect-ratio: 1 / 1;
+        max-width: 85%;
+        margin: 14px;
+        align-items: center;
+        background-color: var(--second-color);
+        transform: translateX(5%);
+        margin-top: 5px;
+    }
+    img {
+        display: flex;
+        flex: 1;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .product-detail {
+        padding: 20px 40px;
+        text-align: left;
+    }
+
+    .pname {
+        font-size: 20px !important;
+    }
+
+    .pprice {
+        margin-top: 10px;
+        font-size: 14px !important;
+    }
+
+    .pdetail {
+        margin-top: 15px;
+        font-size: 15px !important;
+    }
+
+    .size-options {
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+        
+    }
+
+
+    /* button size css*/
+
+    .size-btn {
+        appearance: none;
+        background-color: white;
+        border: 1px solid var(--second-color);
+        border-radius: 20px;
+        box-sizing: border-box;
+        color: #3B3B3B;
+        cursor: pointer;
+        font-size: 14px;
+        line-height: normal;
+        margin: 0;
+        outline: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: 80px;
+        will-change: transform;
+    }
+
+    .size-btn:disabled {
+        pointer-events: none;
+    }
+
+    .size-btn:hover {
+        transform: translateY(-2px);
+    }
+
+    .size-active {
+        box-shadow: none;
+        color: white;
+        background-color: #1A1A1A;
+        box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+        transform: translateY(0);
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    section {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .another-product {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin: 40px;
+    }
+
+    .another-image {
+        background: #707070;
+        aspect-ratio: 1 / 1;
+    }
+
+    img {
+        display: flex;
+        flex: 1;
+        position: relative;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    .another-name {
+        font-size: 20px;
+        padding: 5px 0;
+    }
+}
