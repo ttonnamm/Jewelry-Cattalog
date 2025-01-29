@@ -169,13 +169,14 @@
 
 @media (max-width: 768px) {
     .main-1 {
+        margin-top: 20px;
         padding: 90px 0;
     }
 
     .back {
         z-index: 1000;
         position: fixed;
-        transform: translateY(-260%);
+        transform: translateY(-330%);
         left: 20px;
         margin: 0;
         outline: none;
