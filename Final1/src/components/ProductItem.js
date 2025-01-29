@@ -2,7 +2,7 @@ import './ProductItem.css';
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const ProductItem = ({ products }) => {
+const ProductItem = ({ products, isSearchVisible }) => {
     // State for category filters
     const [filters, setFilters] = useState({
         A: false,
@@ -17,7 +17,7 @@ const ProductItem = ({ products }) => {
     const [isMenuVisible, setIsMenuVisible] = useState(false);
     const [isFilterVisible, setIsFilterVisible] = useState(false);
 
-    /// Toggle navigation menu and ensure filter is closed
+    // Toggle navigation menu and ensure filter is closed
     const toggleMenu = () => {
         setIsMenuVisible(!isMenuVisible);
         if (!isMenuVisible) {
@@ -32,6 +32,7 @@ const ProductItem = ({ products }) => {
             setIsMenuVisible(false); // Close menu if filter is opened
         }
     };
+
     // Handle category and material filters
     const handleFilterChange = (filter) => {
         setFilters(prevFilters => ({
@@ -132,8 +133,8 @@ const ProductItem = ({ products }) => {
                         </div>
                     ))}
                 </aside>
-                
-                <h1 className='phone'>All Products</h1>
+
+                <h1 className={`phone ${isSearchVisible ? 'search-show' : ''}`}>All Products</h1>
                 <div className="product-grid">
                     {productElements}
                 </div>
