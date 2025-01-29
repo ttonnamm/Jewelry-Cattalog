@@ -159,7 +159,17 @@ a {
     }
 
     .input-bx {
-        display: none;
+        position: fixed;
+        top: 65px;
+        padding: 5px;
+        margin: 10px;
+        border: 1px solid var(--first-color-dark);
+        transition: .5s;
+        right: -100%;
+    }
+
+    .input-bx.search-show {
+        right: 10px;
     }
 
     .uil {
