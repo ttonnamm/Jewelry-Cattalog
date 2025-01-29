@@ -1,3 +1,5 @@
-เชื่อมข้อมูลสินค้าใน Data.js
-ข้อมูล ประของสินค้า แก้ไขในProductItem.js line 109,123
-ตัวแปรค่าต่างๆ line 7-14 , 45-61
+src/components/.....
+
+- เชื่อมข้อมูลสินค้าใน Data.js
+- แก้ไขในProductItem.js ข้อมูลประของสินค้า line 109 (Category),123 (Material)
+- ตัวแปรค่าต่างๆ line 7-14 , 45-61
