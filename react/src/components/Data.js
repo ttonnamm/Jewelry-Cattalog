@@ -16,7 +16,7 @@ const products = [
         image: "testimg.jpg",
         price: "32,000",
         detail: "A letter is a message written for a variety of purposes, from friendly to formal. They can help maintain bonds between friends, especially if they’re far apart. Letters are also used by professionals to communicate their concerns. In some schools"
-    }
+    },
     {
         id: 3,
         name: "Cat",

@@ -1,8 +1,10 @@
 import './ProductItem.css';
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
+import fetchProducts from '../components/Data';
 
-const ProductItem = ({ products, isSearchVisible }) => {
+const ProductItem = ({isSearchVisible }) => {
+    const [products, setProducts] = useState([]);
     // State for category filters
     const [filters, setFilters] = useState({
         A: false,
@@ -16,6 +18,13 @@ const ProductItem = ({ products, isSearchVisible }) => {
     // State for showing/hiding navigation and filters
     const [isMenuVisible, setIsMenuVisible] = useState(false);
     const [isFilterVisible, setIsFilterVisible] = useState(false);
+
+    useEffect(() => {
+        const fetchProducts = async () => {
+            const data = await fetchProducts();
+            setProducts(data);
+        }
+    }, []);
 
     // Toggle navigation menu and ensure filter is closed
     const toggleMenu = () => {
